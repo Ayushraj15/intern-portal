@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Leaderboard</title></head>
+<body>
+  <h2>Top Interns</h2>
+  <ul id="board"></ul>
+
+  <script>
+    fetch('http://localhost:5000/api/leaderboard')
+      .then(res => res.json())
+      .then(data => {
+        const board = document.getElementById('board');
+        data.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = `${user.name} - ₹${user.donations}`;
+          board.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

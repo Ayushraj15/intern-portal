@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+h1, h2 {
+  color: #1f4e79;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
